@@ -1,0 +1,3 @@
+#! /bin/sh
+echo Mount root filesystem read only...
+mount -o remount,ro /

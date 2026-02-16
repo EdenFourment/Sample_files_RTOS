@@ -1,0 +1,16 @@
+#! /bin/sh
+
+start() {
+sleep 5
+udhcpc -i eth0
+}
+
+case "$1" in
+# test key upon boot
+  start)
+  	start
+	;;
+# does nothing for halt or reboot
+  *)
+	
+esac

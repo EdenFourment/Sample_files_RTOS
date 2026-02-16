@@ -1,0 +1,6 @@
+#! /bin/sh
+modprobe i2c-bcm2835
+modprobe i2c-dev
+modprobe spi-bcm2835
+modprobe spidev
+

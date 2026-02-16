@@ -1,0 +1,23 @@
+#! /bin/sh
+
+start() {
+if [ -f "/etc/dropbear/dropbear_ecdsa_host_key" ];
+then
+echo "-- dropbearkey present, SD card will be monted read-only";
+ro;
+else
+echo "-- dropbearkey not present, SD card remains read-write";
+echo "-- key will be generated upon the first SSH connection"
+echo "-- you may use ro command after key generation to secure the SD card"
+fi
+}
+
+case "$1" in
+# test key upon boot
+  start)
+  	start
+	;;
+# does nothing for halt or reboot
+  *)
+	
+esac
