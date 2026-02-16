@@ -1,0 +1,19 @@
+#! /bin/sh
+# From Christophe Blaess (www.blaess.fr)
+
+
+./GPIO17 $QUERY_STRING
+
+
+printf '\r\n\r\n'
+echo '<html>'
+echo '<head>'
+echo '<title>GPIO17 control</title>'
+echo '</head>'
+echo '<body>'
+echo '<a href="/cgi-bin/set-GPIO_c?1"> GPIO17 on</a><br/>'
+echo '<a href="/cgi-bin/set-GPIO_c?0"> GPIO17 off</a>'
+echo '<hr/>'
+echo '<a href="/index.html">Back...</a>'
+echo '</body></html>'
+

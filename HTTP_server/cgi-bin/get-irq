@@ -1,0 +1,19 @@
+#! /bin/sh
+# From Christophe Blaess (www.blaess.fr)
+printf "\r\n\r\n"
+echo '<html>'
+echo '<head>'
+echo '<title>Raspberry-pi3 Interruptions</title>'
+echo '<meta http-equiv="refresh" content="5" />'
+echo '</head>'
+echo '<body>'
+echo '<pre>'
+cat /proc/interrupts
+echo '</pre>'
+echo '<hr/>'
+echo '<a href="/index.html">Back..</a>'
+echo '</body>'
+echo '</html>'
+
+
+

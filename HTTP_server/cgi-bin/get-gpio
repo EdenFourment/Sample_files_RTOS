@@ -1,0 +1,22 @@
+#! /bin/sh
+# From Christophe Blaess (www.blaess.fr)
+echo 4 > /sys/class/gpio/export 2>/dev/null
+echo in > /sys/class/gpio/gpio4/direction 2>/dev/null
+
+printf "\r\n\r\n"
+echo '<html>'
+echo '<head>'
+echo '  <title>Get GPIO4 value</title>'
+echo ' <meta http-equiv="refresh" content="1" />'
+echo '</head>'
+echo '<body>'
+echo '<pre>'
+./GPIO4
+echo '</pre>'
+echo '<hr/>'
+echo '<a href="/index.html">Back..</a>'
+echo '</body>'
+echo '</html>'
+
+
+

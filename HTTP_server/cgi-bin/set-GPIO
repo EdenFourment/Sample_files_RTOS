@@ -1,0 +1,25 @@
+#! /bin/sh
+# From Christophe Blaess (www.blaess.fr)
+
+echo 18 > /sys/class/gpio/export 2>/dev/null
+echo out > /sys/class/gpio/gpio18/direction 2>/dev/null
+
+if [ "$QUERY_STRING" = "1" ]
+then
+	echo 1 > /sys/class/gpio/gpio18/value
+else
+	echo 0 > /sys/class/gpio/gpio18/value
+fi
+
+printf '\r\n\r\n'
+echo '<html>'
+echo '<head>'
+echo '<title>GPIO18 control</title>'
+echo '</head>'
+echo '<body>'
+echo '<a href="/cgi-bin/set-GPIO?1"> GPIO18 on</a><br/>'
+echo '<a href="/cgi-bin/set-GPIO?0"> GPIO18 off</a>'
+echo '<hr/>'
+echo '<a href="/index.html">Back...</a>'
+echo '</body></html>'
+

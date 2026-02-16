@@ -1,0 +1,4 @@
+arm-linux-gcc ioctl-gpio-list.c  -o ioctl-gpio-list -Wall
+arm-linux-gcc ioctl-toggle-gpio.c  -o ioctl-toggle-gpio -Wall
+arm-linux-gcc ioctl-fast-toggle-gpio.c  -o ioctl-fast-toggle-gpio -Wall
+arm-linux-gcc ioctl-invert-gpio.c  -o ioctl-invert-gpio -Wall

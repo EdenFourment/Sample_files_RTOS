@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title>cgi scripts example</title>
+	</head>
+	<body>
+		<h1>Test of Common Gateway Interface</h1>
+		This page displays from the embedded HTTP server...
+		<ul>
+		<li>Display list of  <a href="cgi-bin/get-irq">interruptions</a> (shell only)</li>
+		<li>Drive <a href="cgi-bin/set-GPIO">GPIO18</a> (shell only) - connect a 330 Ohm resistor between GPIO18 and LD2</li>
+                <li>Drive <a href="cgi-bin/set-GPIO_c">GPIO17</a> (shell calling C code) - connect a 330 Ohm resistor between GPIO17 and LD1</li>
+                <li>Get <a href="cgi-bin/get-gpio">GPIO4</a> (shell calling C code) - connect directly GPIO4 (internal pull-up) to either SW1 or SW2</li> 
+		</ul>
+	</body>
+</html>
